@@ -1,0 +1,22 @@
+/* GLOBAL RESET */
+* {box-sizing: border-box;}
+body {margin: 0;}
+
+/* GLOBAL COLORS */
+body {
+    background-color: #f90;
+    color: rgba(255,255,255,.8);
+}
+
+a {
+    color: rgba(255,255,51,1);
+}
+
+/* GLOBAL TYPOGRAPHY */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 88.75%; /* 14px */
+    line-height: 1.4;
+}
+
+p {max-width: 35em;}
