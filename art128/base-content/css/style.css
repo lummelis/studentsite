@@ -1,0 +1,102 @@
+body {
+    background: #fa0;
+}
+
+/* -------------------------------------
+CSS TABLE OF CONTENTS
+# BASE CONTENT (GLOBALS)
+    # RESET
+    # COLORS
+    # TYPOGRAPHY
+        # BODY
+        # HEADING
+        # PARAGRAPHS
+        # LINKS
+        # LISTS
+        # BLOCK QUOTES
+        # HELPERS
+    # MEDIA
+        #IMAGES (Responsive)
+    # COMPONENTS/UI ELEMENTS
+        # BUTTONS
+# BASE LAYOUT
+    # CONTAINER
+    # MEDIA QUERIES
+    # GRID SYSTEM
+# SITE STRUCTURE
+    # SITE HEADER
+        # SITE ID
+    # SITE MAIN
+    # SITE FOOTER
+    # SITE NAVIGATION
+        # TOGGLE NAV
+    # SECTIONS
+    # SUB PAGES
+    
+-----------------------------------------*/
+
+body {margin: 0;}
+* {box-sizing: border-box;}
+
+/* TYPOGRAPHY */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: .5em 0;
+}
+
+h1 {font-size: 3em;  /* 48px based on a 16em */}
+h2 {font-size: 2.25em;  /* 36px based on a 16em */}
+h3 {font-size: 1.5em;  /* 24px based on a 16em */}
+h4 {font-size: 1.3125em;  /* 21px based on a 16em */}
+h5 {font-size: 1.125em;  /* 18px based on a 16em */}
+h6 {font-size: 1em;  /* 16px based on a 16em */}
+
+/* PARAGRAPHS */
+p{
+    max-width: 35em;
+}
+a {
+    color: teal;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.button, button {
+    font-size: 1em;
+    display: inline-block;
+    background-color: honeydew;
+    color: darkolivegreen;
+    padding: 1em 1.5em;
+    border-radius: 1em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    line-height: 1;
+    text-align: center;
+}
+
+.button:hover, button:hover {
+    background-color: darkgreen;
+    color: greenyellow;
+    text-decoration: none;
+}
+
+.button.alt {
+border: 1px solid darkolivegreen;
+    background-color: transparent;
+    color: honeydew;
+}
+
+
+.button.alt:hover {
+    background-color: darkgreen;
+    color: greenyellow;
+    }
