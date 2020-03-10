@@ -237,7 +237,7 @@ body {
 }
 
 .site-id a {
-    display: block;
+    display: inline-block;
     padding: .25em 0;
 }
 
@@ -269,28 +269,71 @@ body {
     cursor: pointer;
 }
 
+.menu-button::selection {
+    color: none;
+    background: none;
+}
+
 /* TOGGLE NAV */
 @media (max-width: 767px){
-    .site-header .container {
-        display: flex;
-        justify-content: space-between;
+    .toggle-nav .site-id h1 {
+        text-align: left;
     }
     .toggle-nav .menu-button {
-        position: static;
+        position: absolute;
         left: auto;
+        top: 1em;
+        right: 1.5em;
     }
+
     .toggle-nav .site-nav {
-        text-align: right;
+        text-align: center;
     }
+    
+    /* HIDE NAV ON SMALL SCREENS BY DEFAULT */
     .toggle-nav .site-nav ul {
         position: absolute;
         left: -9999px;
     }
+    /* SHOW NAV ON SMALL SCREENS WHEN EXPANDED CLASS IS TOGGLED */
     .toggle-nav.expanded .site-nav ul {
         position: static;
         left: auto;
         display: block;
+        margin-top: 1em;
     }
+    .toggle-nav.expanded .site-nav a{
+        background-color: teal;
+        color: white;
+        margin: .5em 0;
+        padding: 1em;
+    }
+
+    .toggle-nav.expanded .site-nav a:hover {
+        background-color: white;
+        color: teal;
+    }
+}
+/* NAVICON */
+.navicon {
+    color: rgba(0,0,0,0);
+    padding: 0;
+}
+
+.navicon::after {
+    content: "\2630";
+    display: inline-block;
+    color: teal;
+    /* color: rgba(0,0,0,1); */
+    font-size: 1.5em;
+    transform: rotate(0deg);
+}
+
+.expanded .navicon::after {
+    content:"\2715";
+    color: teal;
+    transition: transform .4s ease-out;
+    transform: rotate(-90deg);
 }
 /* SITE MAIN (Main Content Area) */
 .site-main {
