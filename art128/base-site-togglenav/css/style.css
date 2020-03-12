@@ -294,13 +294,14 @@ body {
     .toggle-nav .site-nav ul {
         position: absolute;
         left: -9999px;
+        transition: all 1s ease;
+        margin-top: 1em;
     }
     /* SHOW NAV ON SMALL SCREENS WHEN EXPANDED CLASS IS TOGGLED */
     .toggle-nav.expanded .site-nav ul {
         position: static;
         left: auto;
         display: block;
-        margin-top: 1em;
     }
     .toggle-nav.expanded .site-nav a{
         background-color: teal;
@@ -314,6 +315,16 @@ body {
         color: teal;
     }
 }
+/* ANIMATING THE NAV */
+.toggle-nav .site-nav ul {
+    transition: all 1s ease;
+    max-height: 400px;
+}
+
+.toggle-nav.expanded .site-nav ul {
+    max-height: 400px;
+}
+
 /* NAVICON */
 .navicon {
     color: rgba(0,0,0,0);
