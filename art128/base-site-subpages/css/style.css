@@ -80,24 +80,6 @@ h6 {
 p{
     max-width: 35em;
 }
-/* TYPE SPECIMEN */
-.headline {
-    font-size: 4em;
-    font-weight: bold;
-}
-
-.subheadline {
-    font-size: 2em;
-    line-height: 1.2;
-    font-weight: normal;
-    color: rgba(0, 0, 0, .7);
-}
-
-.date {
-    color: rgba(0, 0, 0, .7);
-    font-style: italic;
-
-}
 
 /* LINKS */
 a {
@@ -109,12 +91,7 @@ a:hover {
     color: white;
     text-decoration: underline;
 }
-/* HELPERS */
-@media (min-width: 768px) {
-.hideonlarge {
-    visibility: hidden;
-}
-}
+
 /* MEDIA */
 img {
     max-width: 100%;
@@ -317,15 +294,14 @@ body {
     .toggle-nav .site-nav ul {
         position: absolute;
         left: -9999px;
+        transition: all 1s ease;
         margin-top: 1em;
     }
-
     /* SHOW NAV ON SMALL SCREENS WHEN EXPANDED CLASS IS TOGGLED */
     .toggle-nav.expanded .site-nav ul {
         position: static;
         left: auto;
         display: block;
-        transform: translateY(0px);
     }
     .toggle-nav.expanded .site-nav a{
         background-color: teal;
@@ -338,13 +314,11 @@ body {
         background-color: white;
         color: teal;
     }
-
 }
-/* ANIMATING THE TOGGLE NAV */
+/* ANIMATING THE NAV */
 .toggle-nav .site-nav ul {
-    transform: translateY(-40px);
     transition: all 1s ease;
-    max-height: 0px;
+    max-height: 400px;
 }
 
 .toggle-nav.expanded .site-nav ul {
@@ -392,51 +366,6 @@ section {
 .hero p{
     margin-left: auto;
     margin-right: auto;
-}
-
-/* ARTICLE */
-article {
-    padding: 4em 0;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-article .date + p::first-letter {
-    color: teal;
-    font-size: 5.5em;
-    line-height: 1;
-    font-weight: bold;
-    float: left;
-    margin: 0 .1em 0 0;
-    padding: 0;
-    display: block;
-}
-
-article .date + p::first-line {
-    color: teal;
-    text-transform: uppercase;
-}
-
-/* FORMS */
-form { 
-    padding: 1em 0;
-}
-label, input {
-    display: block;
-    width: 100%;
-}
-
-label, input [type="text"], textarea {
-    width: 100%;
-}
-
-input, textarea {
-    color: teal;
-    border: 1px solid teal;
-}
-label {
-    margin-top: 1em;
 }
 
 /* -----------------------------------
