@@ -81,6 +81,23 @@ p {
     max-width: 35em;
 }
 
+/* TYPE SPECIMEN */
+.headline {
+    font-size: 4em;
+    font-weight: bold;
+   
+}
+.subheadline {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: normal;
+    /* color: rgba(0,0,0,.7); */
+}
+.date {
+    font-style: italic;
+    color: rgba(0,0,0,.5);
+}
+
 /* LINKS */
 a {
     color: teal;
@@ -89,6 +106,21 @@ a {
 a:hover {
     color: white;
     text-decoration: underline;
+}
+
+/* BLOCKQUOTES */
+blockquote{
+    font-size: 1.5em;
+    line-height: 1.2em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* HELPERS */
+@media(min-width:768px){
+    .hideonlarge {
+        visibility: hidden;
+    }
 }
 
 /* MEDIA */
@@ -102,8 +134,8 @@ img {
 button {
     font-size: 1em;
     display: inline-block;
-    background-color: honeydew;
-    color: darkolivegreen;
+    background-color: teal;
+    color: white;
     padding: 1em 1.5em;
     border-radius: .5em;
     text-transform: uppercase;
@@ -113,20 +145,22 @@ button {
 }
 .button:hover,
 button:hover {
-    background-color: darkgreen;
-    color: greenyellow;
+    background-color: white;
+    color: teal;
     text-decoration: none;
+    border: 1px solid teal;
 }
 
 .button.alt {
-    border: 1px solid darkolivegreen;
+    border: 1px solid teal;
         background-color: transparent;
-        color: honeydew;
+        color: teal;
 }
 
 .button.alt:hover {
-    background-color: darkgreen;
-    color: greenyellow;
+    background-color: teal;
+    color: white;
+    border: 1px solid white;
 }
 
 /* BASE LAYOUT */
@@ -378,6 +412,56 @@ section {
     margin-right: auto;
 }
 
+article {
+    padding: 4em 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+article .date + p::first-letter {
+    color: teal;
+    font-size: 5.6em;
+    line-height: 1;
+    font-weight: bold;
+    float: left;
+    margin: 0 .1em 0 0;
+    padding: 0;
+    display: block;
+}
+article .date + p::first-line {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* ADDRESS */
+address {
+    margin: 1em 0;
+}
+
+/* FORMS */
+form {
+    padding: 0;
+}
+
+label, input[type="text"], textarea {
+    width: 100%;
+    display: block;
+}
+
+label {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+input, textarea {
+    background-color: rgba(0,0,0,.1);
+    border: 1px solid rgba(0,0,0,.1);
+    padding: 1em;
+}
+
+input[type="submit"] {
+    margin-top: 1.5em;
+}
 
 
 
@@ -432,7 +516,7 @@ body.demo::before {
         content: "EX-Larger Screen (1200px + )";
         background: teal;}
     }
-}
+
 
 /* FOR DEV TESTING ONLY */
 
