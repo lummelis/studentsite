@@ -1,0 +1,29 @@
+/* BASE LAYOUT */
+
+/* FOR SMALL-SIZED SCREENS (and Larger) */
+body {
+    font-size: 87.5% /* 14px */
+}
+/* CONTAINER */
+.container {
+    padding: 0 1em;
+    margin: 0 auto;
+    /* overflow-x: hidden; */
+}
+
+/* MEDIA QUERIES */
+/* FOR MID-SIZED SCREENS/TABLETS (and Larger) */
+@media (min-width: $breakpoint-small) {
+}
+
+/* FOR LARGE-SIZED SCREENS/LAPTOPS (and Larger) */
+@media (min-width: $breakpoint-medium) {
+    body { font-size: 100% /* 16px */ }
+    .container {  max-width: 1000px; }
+}
+
+/* FOR EXTRA-LARGE-SIZED SCREENS/DESKTOP MONITORS (and Larger) */
+@media (min-width: $breakpoint-large) {
+    body { font-size: 112.5% /* 18px */ }
+    .container { max-width: 1200px; }
+}
